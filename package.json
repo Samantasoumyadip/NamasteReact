@@ -1,0 +1,33 @@
+{
+  "name": "react-namsatereact",
+  "version": "1.0.0",
+  "description": "This is Namaste React by Akshay Saini",
+  "keywords": [
+    "react"
+  ],
+  "homepage": "https://github.com/Samantasoumyadip/NamasteReact#readme",
+  "bugs": {
+    "url": "https://github.com/Samantasoumyadip/NamasteReact/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Samantasoumyadip/NamasteReact.git"
+  },
+  "license": "ISC",
+  "author": "Soumyadip Samanta",
+  "type": "commonjs",
+  "scripts": {
+    "test": "jest"
+  },
+  "devDependencies": {
+    "parcel": "^2.16.4"
+  },
+  "dependencies": {
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4"
+  },
+
+  "browserslist": [
+    "last 2 versions"
+  ]
+}

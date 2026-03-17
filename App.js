@@ -1,3 +1,6 @@
+import React from "react";
+import ReactDOM from "react-dom/client";
+
 const parent = React.createElement(
     "div",
     { id: "parent" }, [
@@ -5,7 +8,7 @@ const parent = React.createElement(
             "div",
             { id: "child_1" }, [
                 // IDs must be strings — Heading_1 etc. were undefined variables and threw ReferenceError
-                React.createElement("h1", { id: "Heading_1" }, "Heading 1"),
+                React.createElement("h1", { id: "Heading_1" }, "I am Heading 1"),
                 React.createElement("h2", { id: "Heading_2" }, "Heading 2"),
             ]
         ),
