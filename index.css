@@ -1,3 +1,54 @@
-h1,h2  {
-    color: blue;
+.header {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 28px;
+    padding: 24px 30px;
+    border: 1.5px solid transparent;
+    border-radius: 30px;
+    overflow: hidden;
+    background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(255, 248, 245, 0.96)) padding-box,
+        linear-gradient(135deg, rgba(255, 235, 230, 0.95), rgba(255, 181, 166, 0.9), rgba(255, 238, 234, 0.95)) border-box;
+    box-shadow:
+        0 22px 48px rgba(255, 204, 193, 0.22),
+        0 10px 24px rgba(255, 224, 217, 0.35),
+        inset 0 1px 0 rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+}
+
+.header::before {
+    content: "";
+    position: absolute;
+    inset: 16px;
+    border-radius: 22px;
+    background: rgba(255, 255, 255, 0.76);
+    box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.95),
+        0 12px 28px rgba(255, 229, 223, 0.45);
+    z-index: 0;
+}
+
+.header > * {
+    position: relative;
+    z-index: 1;
+}
+
+.Logo {
+    width: 100px;
+    height: 100px;
+    border-radius: 20px;
+    object-fit: cover;
+
+}
+
+.navbar > ul {
+    display: flex;
+    list-style-type: none;
+}
+
+.navbar > ul > li {
+    padding: 30px;
 }
