@@ -62,15 +62,31 @@
     padding: 10px;
 }
 
+.res-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    margin-top: 20px;
+    margin-left: 80px;
+}
+
 .res-card {
     width: 200px;
-    height: 300px;
-    border: 1px solid;
+    /* height: 300px; */
+    /* border: 1px solid; */
     border-radius: 20px;
     object-fit: cover;
     margin: 20px;
     padding-left: 10px;
     background-color: rgb(241, 239, 232);
+}
+
+.res-card:hover {
+    border: 1px solid rgb(175, 169, 168);
+    box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.2); 
+    transform: scale(0.95);
+   transition: transform 0.2s ease; 
+   cursor: pointer;
 }
 
 .res-logo {
