@@ -20,7 +20,7 @@ const Header = () => {
 
 const Restaurant = (props) => {
     const { resData } = props;
-    const { name, avgRating, cloudinaryImageId, cuisines, costForTwo, sla } = resData.info;
+    const { name, avgRating, cloudinaryImageId, cuisines, costForTwo, sla } = resData.info;  // Destructuring the resData.info object to get the required properties
     return (
         <div className="res-card">
             <img className="res-logo" src={"https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/" + cloudinaryImageId} />
@@ -879,30 +879,9 @@ const Body = () => {
         <div className="body">
         <div className="Search"> Search </div>
         <div className="res-container"> 
-        < Restaurant 
-        resData = {resList[0]}
-        /> 
-        < Restaurant 
-        resData = {resList[1]}
-        /> 
-        < Restaurant 
-        resData = {resList[2]}
-        /> 
-        < Restaurant 
-        resData = {resList[3]}
-        /> 
-        < Restaurant 
-        resData = {resList[4]}
-        /> 
-        < Restaurant 
-        resData = {resList[5]}
-        /> 
-        < Restaurant 
-        resData = {resList[6]}
-        /> 
-        < Restaurant 
-        resData = {resList[7]}
-        /> 
+        {
+        resList.map(restaurant => (<Restaurant resData = {restaurant} key={restaurant.info.id} />
+        ))}
         </div>
         </div>
     );
