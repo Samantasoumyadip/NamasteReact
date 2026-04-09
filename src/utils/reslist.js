@@ -1,38 +1,3 @@
-import ReactDOM from "react-dom/client";
-
-const Header = () => {
-    return (
-        <div className = "header">
-            <div>
-                <img className="Logo" src="https://www.psdtemplatedesign.com/wp-content/uploads/edd/2017/12/logo-design.jpg" />
-            </div>
-            <div className ="navbar">
-                <ul>
-                    <li>Home</li>
-                    <li>About</li>
-                    <li>Contact</li>
-                    <li>Cart</li>
-                </ul>
-            </div>
-        </div>
-    );
-};
-
-const Restaurant = (props) => {
-    const { resData } = props;
-    const { name, avgRating, cloudinaryImageId, cuisines, costForTwo, sla } = resData.info;  // Destructuring the resData.info object to get the required properties
-    return (
-        <div className="res-card">
-            <img className="res-logo" src={"https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/" + cloudinaryImageId} />
-            <h2> {name} </h2>
-            <h3> {avgRating} Stars </h3>
-            <h3> {sla.deliveryTime + " mins"} </h3>
-            <h4> {cuisines.join(", ")} </h4>
-            <h4> {costForTwo} </h4>
-        </div>
-    );
-};
-
 const resList = [
                   {
                     "@type": "type.googleapis.com/swiggy.presentation.food.v2.Restaurant",
@@ -874,28 +839,4 @@ const resList = [
                   }
                 ]
 
-const Body = () => {
-    return (
-        <div className="body">
-        <div className="Search"> Search </div>
-        <div className="res-container"> 
-        {
-        resList.map(restaurant => (<Restaurant resData = {restaurant} key={restaurant.info.id} />
-        ))}
-        </div>
-        </div>
-    );
-};
-
-
-const AppLayout = () => {
-    return (
-        <div className="app"> 
-            <Header />
-            <Body />
-        </div>
-    );
-};    
-
-const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(<AppLayout />);
+export default resList; 
