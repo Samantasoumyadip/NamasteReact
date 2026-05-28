@@ -5,7 +5,7 @@ import { useState, useEffect } from "react";
 
 const Body = () => {
 
-    const [listOfRestaurants, setListOfRestaurants] = useState(resList);
+    const [listOfRestaurants, setListOfRestaurants] = useState([]);
     useEffect(() => {
         fetchData();
     }, []);
