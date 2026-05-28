@@ -17,8 +17,8 @@
   "author": "Soumyadip Samanta",
   "type": "commonjs",
   "scripts": {
-    "start": "parcel helloworld.html",
-    "build": "parcel build helloworld.html",
+    "start": "parcel index.html",
+    "build": "parcel build index.html",
     "test": "jest"
   },
   "devDependencies": {
