@@ -1,11 +1,12 @@
 import Restaurant from "./Restaurant";
 import resList from "../utils/reslist";
 import { useState, useEffect } from "react";
+import Shimmer from "./Shimmer";
 
 
 const Body = () => {
 
-    const [listOfRestaurants, setListOfRestaurants] = useState(resList);
+    const [listOfRestaurants, setListOfRestaurants] = useState([]);
     useEffect(() => {
         fetchData();
     }, []);
@@ -17,6 +18,10 @@ const Body = () => {
         // Optional chaining is used to avoid errors in case any of the properties in the chain are undefined or null
         setListOfRestaurants(json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
     }
+
+        if (listOfRestaurants.length === 0) {       
+            return <Shimmer />;
+        }
 
     return (
         <div className="body">
