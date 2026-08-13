@@ -152,9 +152,27 @@
     cursor: pointer;
 } 
 
+.search {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
 
+.search-box {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 40px;
+    outline: none;
+}
 
-
+.search-btn {
+    padding: 8px 16px;
+    margin-left: 10px;
+    border: none;
+    border-radius: 20px;
+    background-color: rgb(241, 239, 232);
+    cursor: pointer;
+}
 
 
 
